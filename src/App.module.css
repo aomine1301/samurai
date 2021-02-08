@@ -1,0 +1,26 @@
+.appWrapper {
+    display: grid;
+    margin: 0 auto;
+    //width: 100%;
+    grid-template-areas:
+            "header header"
+            "nav content";
+
+    grid-template-rows: 60px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+
+}
+
+.appWrapperContent {
+    overflow: hidden;
+    margin: 25px 50px;
+    grid-area: content;
+    //border-radius: 25px;
+    border: 1px solid #e7e7e7;
+    background-color: #f8f8f8;
+    //background: linear-gradient(120grad, #6A5ACD 0%, #FFDAB9 45%,#FFA500 100% );
+
+
+
+}

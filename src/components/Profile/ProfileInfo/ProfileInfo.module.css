@@ -1,0 +1,33 @@
+.descriptionBlock {
+    display: flex;
+    justify-content:flex-start;
+    padding: 10px 0 10px 10px;
+}
+
+.imgContainer {
+    background-size: cover;
+}
+.fullNameContainer{
+    display:flex;
+   flex-direction: column;
+}
+.description{
+    margin: 10px 0 20px 0;
+}
+.fullName{
+    margin: 20px;
+    font-size: 25px;
+}
+.imageProfile img{
+
+
+}
+.img{
+    width: 350px;
+    height: 250px;
+    margin-right: 10px;
+}
+.container{
+    margin-left: 10px;
+    padding: 0;
+}

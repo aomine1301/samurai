@@ -1,0 +1,71 @@
+.users_body {
+
+}
+
+.user {
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    font-family: "Agency FB";
+    font-style: italic;
+    border: 1px solid black;
+    margin: 10px 3px;
+    background: rgba(150, 143, 142, 0.26);
+}
+
+.name_status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 180px 10px 5px;
+}
+
+.status {
+    margin-top: 10px;
+    font-size: 15px;
+    font-family: "Arial Narrow";
+}
+
+.button {
+    margin: 0 0 0 20px;
+}
+
+.red {
+    border-radius: 9px;
+    background: red;
+    width: 100px;
+}
+
+.green {
+    border-radius: 9px;
+    background: green;
+    width: 100px;
+
+}
+.main_button{
+    width: 100px;
+    height: 20px;
+    margin:20px 0 0 10px;
+    border-radius: 9px;
+    background: #FFA500;
+}
+.main_button_hide{
+    display: none;
+}
+.country_city {
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 50px 10px 0;
+}
+
+.flex {
+
+}
+
+.img {
+    width: 50px;
+    padding: 10px 0 0 10px;
+}
+
+

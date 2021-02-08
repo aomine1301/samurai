@@ -1,0 +1,37 @@
+.nav{
+    grid-area: nav;
+    //background: url("https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-long-street-long-fireworks-and-beautiful-background-picturebeautifulwatercolorfestivaldream-image_55841.jpg"),no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    //margin-top: 40px;
+    padding: 20px;
+    font-size: 18px;
+}
+.item{
+    border-bottom: 1px solid #d7d7d7;
+    padding: 5px 15px;
+    margin-bottom: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+}
+.item:hover {
+    background-color: #f1f1f1;
+}
+.item1{
+    text-decoration: none;
+    padding: 7px;
+    margin-bottom: 20px;
+    border-radius:15px ;
+}
+.item a{
+    color:black;
+    text-decoration: none;
+}
+.item1 a{
+    color:black;
+    text-decoration: none;
+}
+.item a.active{
+    color: #19601A;
+}

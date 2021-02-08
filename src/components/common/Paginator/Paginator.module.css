@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.selectedPage{
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid black;
+    padding: 0 3px;
+
+}
+.page{
+    display: inline-block;
+    cursor: pointer;
+    margin: 5px;
+}
+

@@ -1,0 +1,36 @@
+.header img {
+    margin: 15px 0 0 25px;
+    width: 30px;
+
+
+}
+.header{
+    position: fixed;
+    width: 100%;
+    grid-area: header;
+    height: 60px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+.loginBlock{
+
+
+    float: right;
+    margin: 10px 30px 0 0;
+}
+.loginLink{
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Arial Narrow" ;
+    color: black;
+}
+.button{
+    margin: 0 0 0 15px;
+    background-color: black;
+    color: white;
+}
+.button:active{
+    background-color: blue;
+}

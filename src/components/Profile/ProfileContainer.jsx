@@ -2,16 +2,17 @@ import React, {Component} from "react";
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-import {getStatus, getUserProfile, updateStatus, savePhoto} from "../../redux/profile-reducer";
+import {getStatus, getUserProfile, updateStatus, updatePhotoThunk} from "../../redux/profile-reducer";
 import {compose} from "redux";
 
 
 class ProfileContainer extends Component {
-    refreshProfile() {
+
+    componentDidMount() {
         let userId = this.props.match.params.userId
         if (!userId) {
             userId = this.props.authorizedUserId
-            if (!userId) {
+            if (!userId){
                 this.props.history.push('/login')
             }
         }
@@ -19,36 +20,27 @@ class ProfileContainer extends Component {
         this.props.getStatus(userId)
     }
 
-    componentDidMount() {
-        this.refreshProfile()
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (this.props.match.params.userId !== prevProps.match.params.userId) {
-            this.refreshProfile()
-        }
-    }
-
     render() {
 
         return <Profile {...this.props}
-                        isOwner={!this.props.match.params.userId}
                         profile={this.props.profile}
+                        fullName={this.props.fullName}
                         status={this.props.status}
                         updateStatus={this.props.updateStatus}
-                        savePhoto={this.props.savePhoto}
+                        updatePhoto={this.props.updatePhotoThunk}
         />
     }
 }
 
 let mapStateToProps = (state) => ({
     profile: state.profilePage.profile,
+    image: state.profilePage.image,
     status: state.profilePage.status,
-    authorizedUserId: state.auth.userId,
-    isAuth: state.auth.isAuth
+    authorizedUserId:state.auth.userId,
+    isAuth:state.auth.isAuth
 })
 
 export default compose(
     withRouter,
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus,savePhoto})
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus,updatePhotoThunk})
 )(ProfileContainer)

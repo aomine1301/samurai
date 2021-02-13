@@ -4,7 +4,6 @@ const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
-const SET_PHOTO = 'SET_PHOTO'
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS'
 
 
@@ -18,8 +17,6 @@ let initialState = {
     newPostBody: 'Введите значение',
     profile: null,
     status: "",
-    // image: 'https://picjumbo.com/wp-content/uploads/alone-with-his-thoughts-1080x720.jpg',
-    // image: 'http://i.mycdn.me/i?r=AzEPZsRbOZEKgBhR0XGMT1Rk808INxK2jCfqbGu1zdWuWKaKTM5SRkZCeTgDn6uOyic',
     large: '',
 }
 
@@ -42,11 +39,6 @@ const profileReducer = (state = initialState, action) => {
                 ...state,
                 status: action.status
             }
-        case SET_PHOTO:
-            return {
-                ...state,
-                image: action.image
-            }
         case SAVE_PHOTO_SUCCESS:
             return {...state, profile: {...state.profile, photos: action.photos}}
         default:
@@ -57,7 +49,6 @@ const profileReducer = (state = initialState, action) => {
 export const addPostCreator = (newPostBody) => ({type: ADD_POST, newPostBody})
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
-export const setPhoto = (image) => ({type: SET_PHOTO, image})
 export const deletePost = (idPost) => ({type: DELETE_POST, idPost})
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos})
 
@@ -69,10 +60,6 @@ export const getStatus = (userId) => async (dispatch) => {
     let response = await profileAPI.getUserStatus(userId)
     dispatch(setStatus(response.data))
 }
-// export const getPhoto = (photo) => async (dispatch) => {
-//     let response = await profileAPI.get(userId)
-//     dispatch(setStatus(response.data))
-// }
 export const updateStatus = (status) => async (dispatch) => {
     let response = await profileAPI.updateStatus(status)
     if (response.data.resultCode === 0) {

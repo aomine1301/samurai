@@ -1,5 +1,5 @@
 .descriptionBlock {
-    display: flex;
+    display: block;
     flex-direction: row;
     justify-content: flex-start;
     padding: 0 0 10px 10px;
@@ -11,11 +11,13 @@
 
 
 .description {
-    margin: 10px 0 20px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 0 20px 0;
 }
 
 .fullName {
-    margin: 20px;
+    margin: 10px;
     font-size: 25px;
 }
 
@@ -28,8 +30,63 @@
 .containerStatus {
     margin: 0 0 0 10px;
 }
+
 .containerBlock {
     display: flex;
-    justify-content: space-between;
-    margin:10px 15px 0 0;
+    justify-content: flex-start;
+    margin: 5px 15px 0 5px;
 }
+
+.containerFlex {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.buttonModal {
+    height: 0;
+    border: none;
+}
+
+.buttonModal:active {
+    border: none;
+}
+
+.buttonSettings {
+    background: none;
+    border: none;
+    /*position: absolute;*/
+    /*left: 93%;*/
+    /*top: 13%;*/
+}
+
+.formSummaryError {
+    width: auto;
+    border: red 2px solid;
+    padding: 5px;
+    color: #9d0a3f;
+    font-weight: bold;
+}
+
+.contact {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.title {
+    font-family: "-apple-system", sans-serif;
+    font-size: 16px;
+}
+
+.contactContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+.stolpFirst{
+    width: 100px;
+}
+

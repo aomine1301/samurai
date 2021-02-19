@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-import {getStatus, getUserProfile, updateStatus,savePhoto} from "../../redux/profile-reducer";
+import {getStatus, getUserProfile, updateStatus, savePhoto, saveProfile} from "../../redux/profile-reducer";
 import {compose} from "redux";
 
 
@@ -51,5 +51,5 @@ let mapStateToProps = (state) => ({
 
 export default compose(
     withRouter,
-    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus,savePhoto})
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus,savePhoto,saveProfile})
 )(ProfileContainer)

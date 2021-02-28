@@ -14,6 +14,7 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "axios": "^0.20.0",
+    "homepage": "https://aomine1301.github.io/samurai/",
     "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
